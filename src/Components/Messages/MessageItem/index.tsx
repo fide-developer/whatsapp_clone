@@ -8,14 +8,12 @@ const MessageItem: React.FC = () => {
     const [timeStampStyle, setTimeStampStyle] = useState<Boolean>(false)
 
     useEffect(()=>{
-            console.log(timeStampRef?.current?.offsetLeft)
-            console.log(textRef?.current?.offsetLeft)
-            let timeStampPosition: Number = timeStampRef?.current?.offsetLeft ? timeStampRef?.current?.offsetLeft : 0
-            let textPosition: Number = textRef?.current?.offsetLeft ? textRef?.current?.offsetLeft : 0
-            if(timeStampPosition<=textPosition){
-                setTimeStampStyle(true)
-                console.log(timeStampStyle)
-            }
+        let timeStampPosition: Number = timeStampRef?.current?.offsetLeft ? timeStampRef?.current?.offsetLeft : 0
+        let textPosition: Number = textRef?.current?.offsetLeft ? textRef?.current?.offsetLeft : 0
+        if(timeStampPosition<=textPosition){
+            setTimeStampStyle(true)
+            console.log(timeStampStyle)
+        }
     },[timeStampRef,textRef])
 
     return(

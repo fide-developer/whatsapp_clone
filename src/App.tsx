@@ -1,12 +1,12 @@
 import React, { useEffect, useReducer } from 'react';
 import ChatBox from './Components/Messages'
 import SideBar from './Components/SideBar'
-import {FlexHorzContainer, FlexVertContainer, MainContent, MyApps} from './GlobalUses/GlobalStyles'
+import {FlexHorizontalContainer, MainContent, MyApps} from './GlobalUses/GlobalStyles'
 import CustomHeader from './Components/CustomHeader';
 import { ConversationDetail, Text } from './Components/ConversationList/Conversation/StyledCom';
 import RoundImage from './Components/RoundImage';
 
-function App() {
+const App = () => {
   return (
     <MyApps>
       <SideBar />
@@ -16,17 +16,17 @@ function App() {
           <RoundImage type="groupProfile" imgURL="https://randomuser.me/api/portraits/med/men/75.jpg"/>
           <ConversationDetail>
                 {/* this flex horizontal container is for conversation detail header */}
-                <FlexHorzContainer>
+                <FlexHorizontalContainer>
                     <Text isTitle={true}>
                         Fufu
                     </Text>
-                </FlexHorzContainer>
+                </FlexHorizontalContainer>
                 {/* this flex horizontal container is for conversation detail description / information */}
-                <FlexHorzContainer>
+                <FlexHorizontalContainer>
                     <Text>
                         online
                     </Text>
-                </FlexHorzContainer>
+                </FlexHorizontalContainer>
             </ConversationDetail>
         </CustomHeader>
         <ChatBox />

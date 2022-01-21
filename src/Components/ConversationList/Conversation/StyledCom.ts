@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import { FlexHorzContainer, FlexVertContainer } from "../../../GlobalUses/GlobalStyles"
-import { ImgHolder, ProfileDetail } from "../../RoundImage/StyledComp"
+import { FlexHorizontalContainer, FlexVerticalContainer } from "../../../GlobalUses/GlobalStyles"
+import { ImgHolder } from "../../RoundImage/StyledComp"
 
-export const ConversationDetail = styled(FlexVertContainer)`
+export const ConversationDetail = styled(FlexVerticalContainer)`
     justify-content: center;
     align-items: flex-start;
     flex-grow:1;
@@ -12,7 +12,7 @@ export const ConversationDetail = styled(FlexVertContainer)`
     padding-right: 1em;
 `
 
-export const ConversationContainer = styled(FlexHorzContainer)`
+export const ConversationContainer = styled(FlexHorizontalContainer)`
     height: 5em;
     width: 100%;
     cursor: pointer; 
@@ -23,6 +23,7 @@ export const ConversationContainer = styled(FlexHorzContainer)`
         background: black;
         .showedOnHover{
             display:flex;
+            width: 2em;
         }
     }
     background-color: #fff;
@@ -42,7 +43,7 @@ export const ConversationContainer = styled(FlexHorzContainer)`
     }
 `
 
-export const ConversationDetailRow = styled(FlexHorzContainer)`
+export const ConversationDetailRow = styled(FlexHorizontalContainer)`
     width: calc(100%);
     height: 1.5em;
 `
@@ -61,54 +62,20 @@ export const LastSeen = styled.div`
     color: #989898;
 `
 
-export const IconGroup = styled(FlexHorzContainer)`
+export const IconGroup = styled(FlexHorizontalContainer)`
     position:relative;
     height: 100%;
     flex-shrink: 0;
     height: 100%;
     border-radius: 0 0 0 50%;
-    padding: 0 0.25em;
 
     svg{
         height:100%;
         width: auto;
+        padding: 0 0.25em;
     }
-
     .showedOnHover{
-        display: none;
+        transition: width 0.15s;
+        width:0;
     }
 `
-// export const ChatOwnerContainer = styled(FlexVertContainer) `
-//     border-bottom: 2.5px solid #F2F2F2;
-//     /* padding: 10em 0; */
-//     display:flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     height:100%;
-//     /* margin: 0 1em; */
-//     flex-grow: 1;
-
-//     div{
-//         align-items: center;
-//         display: flex;
-//     }
-// `
-
-// export const Header = styled(FlexHorzContainer)`
-//     height: 30px;
-// `
-// export const ChatListFont = styled.span`
-//     flex-grow:1;
-// `
-
-// export const ChatName = styled(ChatListFont)`
-//     font-weight: 600;
-// `
-
-// export const LastMessages = styled.div`
-
-// `
-
-// export const TimeLastMessages = styled.div`
-//     font-size: 11pt;
-// `

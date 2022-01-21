@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { FlexHorzContainer, FlexVertContainer } from "../../GlobalUses/GlobalStyles";
+import { FlexHorizontalContainer, FlexVerticalContainer } from "../../GlobalUses/GlobalStyles";
 
-export const ProfileContainer = styled(FlexHorzContainer)`
+export const ProfileContainer = styled(FlexHorizontalContainer)`
     height: 100%;
     overflow-x: hidden;
     flex-grow:1;
@@ -23,7 +23,7 @@ img{
 }
 `
 
-export const ProfileDetail = styled(FlexVertContainer)`
+export const ProfileDetail = styled(FlexVerticalContainer)`
     justify-content: center;
     align-items: flex-start;
     flex-grow:1;
@@ -33,7 +33,7 @@ export const ProfileDetail = styled(FlexVertContainer)`
     padding-right: 1em;
 `
 
-export const ProfileDescRow = styled(FlexHorzContainer)`
+export const ProfileDescRow = styled(FlexHorizontalContainer)`
     width: calc(100%);
     &>*{
         margin-left: 0.5em;

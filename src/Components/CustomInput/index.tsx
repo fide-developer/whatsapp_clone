@@ -7,12 +7,12 @@ const CustomInput: React.FC<{type ?: string}> = ({type}) => {
     
 
     useEffect(()=>{
-        type ? setTypes(type) : setTypes("text")
-        
+        if(type) setTypes(type)
+        else setTypes("text")
     }, [])
 
     return(
-        <StyledInput />
+        <StyledInput type={types}/>
     )
 }
 

@@ -9,26 +9,31 @@ const NotificationPanel: React.FC = () => {
     const [notificationAccess, setNotificationAccess] = useState<notificationAccessibility>()
 
     const CHECK_NOTIFICATION = async () => {
-        const {state} = await navigator.permissions.query({
-            name: "notifications"
-        })
-
-        switch(state){
-            case "granted":
-                // showLocalNewsWithGeolocation();
-                setNotificationAccess(notificationAccessibility.granted)
-                break;
-            case "prompt":
-                setNotificationAccess(notificationAccessibility.prompt)
-                // showButtonToEnableLocalNews();
-
-                console.log(notificationAccess)
-                
-                break;
-            case "denied":
-                setNotificationAccess(notificationAccessibility.denied)
-                // showNationalNews();
-                break;
+        
+        try{
+            const {state} = await navigator.permissions.query({
+                name: "notifications"
+            })
+    
+            switch(state){
+                case "granted":
+                    // showLocalNewsWithGeolocation();
+                    setNotificationAccess(notificationAccessibility.granted)
+                    break;
+                case "prompt":
+                    setNotificationAccess(notificationAccessibility.prompt)
+                    // showButtonToEnableLocalNews();
+    
+                    console.log(notificationAccess)
+                    
+                    break;
+                case "denied":
+                    setNotificationAccess(notificationAccessibility.denied)
+                    // showNationalNews();
+                    break;
+            }
+        }catch{
+            console.log("error")
         }
     }
 

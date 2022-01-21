@@ -14,18 +14,18 @@ export const FlexGrow = styled.div`
     flex-grow:1;
 `
 
-export const FlexVertContainer = styled.div`
+export const FlexVerticalContainer = styled.div`
     display: flex;
     flex-flow: column nowrap;
     /* width:100%; */
 `
 
-export const FlexHorzContainer = styled.div`
+export const FlexHorizontalContainer = styled.div`
     display: flex;
     flex-flow: row nowrap;
 `
 
-export const MyApps = styled(FlexHorzContainer)`
+export const MyApps = styled(FlexHorizontalContainer)`
     width: 100%;
     height: 100vh;
     min-height: 558px;
