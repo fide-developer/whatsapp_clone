@@ -1,25 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useReducer } from 'react';
+import ChatBox from './Components/Messages'
+import SideBar from './Components/SideBar'
+import {FlexHorzContainer, FlexVertContainer, MainContent, MyApps} from './GlobalUses/GlobalStyles'
+import CustomHeader from './Components/CustomHeader';
+import { ConversationDetail, Text } from './Components/ConversationList/Conversation/StyledCom';
+import RoundImage from './Components/RoundImage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MyApps>
+      <SideBar />
+      {/* <FlexVertContainer> */}
+      <MainContent orientation='vertikal'>
+        <CustomHeader>
+          <RoundImage type="groupProfile" imgURL="https://randomuser.me/api/portraits/med/men/75.jpg"/>
+          <ConversationDetail>
+                {/* this flex horizontal container is for conversation detail header */}
+                <FlexHorzContainer>
+                    <Text isTitle={true}>
+                        Fufu
+                    </Text>
+                </FlexHorzContainer>
+                {/* this flex horizontal container is for conversation detail description / information */}
+                <FlexHorzContainer>
+                    <Text>
+                        online
+                    </Text>
+                </FlexHorzContainer>
+            </ConversationDetail>
+        </CustomHeader>
+        <ChatBox />
+      </MainContent>
+      {/* </FlexVertContainer> */}
+    </MyApps>
   );
 }
 
