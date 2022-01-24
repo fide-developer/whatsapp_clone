@@ -2,18 +2,20 @@ import styled from "styled-components";
 import { StyledInput } from "../CustomInput/StyledCom";
 
 
-export const SearchBarContainer = styled.div`
+export const SearchBarContainer = styled.div<{focused: boolean}>`
     position:relative;
     padding: 0.5em 1em;
-    background: darkgray;
+    background: ${props => props.focused? "white" : "lightgrey"};
+    border-bottom: lightseagreen solid 1px;
+    box-shadow: ${props=> props.focused? "-1px 2px 10px -1px rgba(0,0,0,0.25)" : "none"};
     ${StyledInput}{
-        padding-left: 6em;
+        padding-left: 5em;
     }
 `
 
 export const SearchIcons = styled.div`
     position: absolute;
-    left: 2.5em;
+    left: 2em;
     top: 100;
     /* background-color: black; */
     color:black;

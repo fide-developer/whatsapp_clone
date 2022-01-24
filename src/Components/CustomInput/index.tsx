@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react"
 import { StyledInput } from "./StyledCom"
-import {MdSearch} from "react-icons/md"
 
-const CustomInput: React.FC<{type ?: string}> = ({type}) => {
+const CustomInput: React.FC<{type ?: string, onFocus?: (statesFocus: any) => void }> = ({type, onFocus}) => {
     const [types,setTypes] = useState<string>()
     
 
@@ -12,7 +11,8 @@ const CustomInput: React.FC<{type ?: string}> = ({type}) => {
     }, [])
 
     return(
-        <StyledInput type={types}/>
+        <StyledInput type={types} onFocus={()=> onFocus && onFocus(true)} 
+        onBlur={()=> onFocus && onFocus(false)}/>
     )
 }
 

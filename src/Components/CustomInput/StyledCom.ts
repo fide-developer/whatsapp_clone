@@ -10,4 +10,5 @@ export const StyledInput = styled.input`
     box-shadow: none;
     border:none;
     padding: 0.8em 1.5em;
+    flex-grow: 1;
 `

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react"
+import MessagesIcons from "../../MessageInputBar/MessagesIcons.tsx"
 import { BubbleContainer, BubbleLeft, BubbleRight, MessageTimeStamp } from "./StyledCom"
 
 
@@ -20,6 +21,7 @@ const MessageItem: React.FC = () => {
         <BubbleContainer isFromMe={false}>
             <BubbleLeft className="first"><p>Hi I'm Jonas, nice to meet ya! asd asd asd asd asd asd asd asd asd asd asdasdas asdadasasd asdasdasdas asd asd asdasdasd asdasdasd asdasdasda asdasdasd asd asd asd asd asd asd asd asd asd asd asdasdaasdasdasd  asdasd asdasd asdasdasd asdasd asd <span ref={textRef}> </span></p><MessageTimeStamp ref={timeStampRef} className={timeStampStyle? "break" : ""}>yesterday</MessageTimeStamp></BubbleLeft>
             <BubbleRight className="first"><p>Hi I'm Jonas, nice to meet ya! asd asd asd asd asd asd asd asd asd asd asdasdas asdadasasd asdasdasdas asd asd asdasdasd asdasdasd asdasdasda asdasdasd asd asd asd asd asd asd asd asd asd asd asdasdaasdasdasd  asdasd asdasd asdasdasd asdasd asd <span ref={textRef}> </span></p><MessageTimeStamp ref={timeStampRef} className={timeStampStyle? "break" : ""}>yesterday</MessageTimeStamp></BubbleRight>
+            <MessagesIcons />
         </BubbleContainer>
     )
 }

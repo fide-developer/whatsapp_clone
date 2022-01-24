@@ -1,16 +1,23 @@
 import CustomInput from "../CustomInput"
 import { SearchBarContainer, SearchIcons } from "./StyledComp"
-import {MdSearch} from "react-icons/md"
+import {MdSearch, MdArrowBack} from "react-icons/md"
+import IconAnimationSwitch from "../IconAnimationSwitch"
+import { useCallback, useEffect, useState } from "react"
 
 
 const SearchBar: React.FC = () => {
+    const [isFocused, setIsFocused] = useState<boolean>(false)
+    const switchIcons = useCallback((statesFocus)=>{
+        setIsFocused(statesFocus)
+    }, [isFocused])
 
     return(
-        <SearchBarContainer>
+        <SearchBarContainer focused={isFocused}>
             <SearchIcons>
-                    <MdSearch size="100%"/>
+                <IconAnimationSwitch mainIcon={MdSearch} secondIcon={MdArrowBack} focused={isFocused}/>
+                    {/* <MdSearch size="100%"/> */}
             </SearchIcons>
-            <CustomInput>
+            <CustomInput onFocus={switchIcons}>
             </CustomInput>
         </SearchBarContainer>
     )

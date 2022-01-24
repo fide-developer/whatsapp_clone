@@ -5,6 +5,7 @@ import {FlexHorizontalContainer, MainContent, MyApps} from './GlobalUses/GlobalS
 import CustomHeader from './Components/CustomHeader';
 import { ConversationDetail, Text } from './Components/ConversationList/Conversation/StyledCom';
 import RoundImage from './Components/RoundImage';
+import MessageInputBar from './Components/MessageInputBar';
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
             </ConversationDetail>
         </CustomHeader>
         <ChatBox />
+        <MessageInputBar />
       </MainContent>
       {/* </FlexVertContainer> */}
     </MyApps>
