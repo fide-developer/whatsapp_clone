@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Sizes from './StyledVariable/size'
+import Sizes from './Constant/size'
 
 
 export const MainContent = styled.div<{orientation: string}>`
@@ -32,6 +32,7 @@ export const MyApps = styled(FlexHorizontalContainer)`
     *{
         /* width: 100%; */
         box-sizing: border-box;
+        scrollbar-width: thin;
         //ini nanti font familynya tp belum nyari
     }
     /* max-height: 100%;

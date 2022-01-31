@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { MdNotificationsOff } from "react-icons/md"
-import Colors from "../../GlobalUses/StyledVariable/color"
+import Colors from "../../GlobalUses/Constant/color"
 import { IconNotification, NotificationText, NotificationContainer } from "./StyledComp"
 import { notificationAccessibility } from "./type"
 

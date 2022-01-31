@@ -11,18 +11,23 @@ export const MessageInputBarContainer = styled(FlexHorizontalContainer)`
 
     svg{
         padding:0.4em 0.8em;
-        height: 100%;
+        height: 80%;
         cursor: pointer;
+        flex-shrink:0;
     }
 `
 
 export const AttachmentCustom = styled.div`
     display:flex;
+    padding: 0 0.8em;
     align-items: center;
     justify-items:center;
     height: 100%;
+    width:auto;
     overflow: hidden;
     svg{
+        flex-shrink: 0;
+        margin-left: -25%;
         transform: scaleX(-1) rotate(-45deg);
     }
 `

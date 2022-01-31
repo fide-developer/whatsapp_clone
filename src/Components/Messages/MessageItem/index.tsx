@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import MessagesIcons from "../../MessageInputBar/MessagesIcons.tsx"
+import MessagesIcons from "../../MessageInputBar/EmojiSelector/Emojis"
 import { BubbleContainer, BubbleLeft, BubbleRight, MessageTimeStamp } from "./StyledCom"
 
 

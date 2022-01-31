@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { FlexHorizontalContainer } from "../../GlobalUses/GlobalStyles";
-import Colors from "../../GlobalUses/StyledVariable/color";
+import Colors from "../../GlobalUses/Constant/color";
 
 
 export const ToolbarContainer = styled(FlexHorizontalContainer).attrs({as:"header"})`

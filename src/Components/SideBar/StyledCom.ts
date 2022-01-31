@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Sizes from "../../GlobalUses/StyledVariable/size"
+import Sizes from "../../GlobalUses/Constant/size"
 import { ImgHolder } from "../RoundImage/StyledComp"
 
 export const SidebarContainer = styled.div`
