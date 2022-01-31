@@ -5,10 +5,8 @@ export const EmoticonContainer = styled(FlexVerticalContainer)`
     width: inherit;
     padding: 0 1em;
     flex-grow:1;
-    background: yellow;
-    
 `
-export const EmoticonTitle = styled.div`
+export const EmoticonTitleGroup = styled.div`
 
 `
 
